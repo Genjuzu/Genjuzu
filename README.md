@@ -1,7 +1,7 @@
 ## Hi there 👋
 
 
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Ashutosh00710&theme=high-contrast)](https://github.com/Genjuzu/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Genjuzu&theme=high-contrast)](https://github.com/Genjuzu/github-readme-activity-graph)
 
 <!--
 **Genjuzu/Genjuzu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
