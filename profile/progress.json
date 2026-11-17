@@ -2,44 +2,54 @@
   "missions": [
     {
       "id": "vr-scenes",
+      "label": "mission:vr-scenes",
       "title": "VR Scene Building",
       "description": "Native VR scene editor with Unity & OpenXR, two controllers.",
       "progress": 65,
+      "auto": true,
       "color": "#22d3ee"
     },
     {
       "id": "live-avatars",
+      "label": "mission:live-avatars",
       "title": "Live Avatars",
-      "description": "Gaussian splat avatars rendered client-side, driven via LiveKit.",
+      "description": "Avatar rigs rendered client-side, driven via LiveKit.",
       "progress": 45,
+      "auto": true,
       "color": "#a78bfa"
     },
     {
       "id": "ai-agents",
+      "label": "mission:ai-agents",
       "title": "AI Agent Stack",
       "description": "Personal on-device answer memory and multi-agent app factory.",
       "progress": 55,
+      "auto": true,
       "color": "#34d399"
     },
     {
       "id": "music",
+      "label": "mission:music",
       "title": "Music Production",
       "description": "Lossless Suno catalogue workflows and festival gig acquisition tools.",
       "progress": 35,
+      "auto": true,
       "color": "#f472b6"
     },
     {
       "id": "fiction",
+      "label": "mission:fiction",
       "title": "Fiction Writing",
       "description": "Book of Tammuz — a dark mythic novel in progress.",
       "progress": 25,
+      "auto": true,
       "color": "#fbbf24"
     }
   ],
   "now": [
     "Multivox experiments — spatial audio voxel engines",
     "LivePortrait fork: animating portraits for avatar tests",
-    "Gaussian splat turnaround & FaceLift refinement in Colab",
+    "Avatar turnaround & FaceLift refinement in Colab",
     "App-Manufaktur: multi-bot app factory playbook"
   ]
 }

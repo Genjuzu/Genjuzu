@@ -31,7 +31,7 @@
 
   <g transform="translate(0,178)">
     <text x="36" y="20" font-family="'JetBrains Mono',monospace" font-size="16" font-weight="700" fill="#e6edf3">Live Avatars</text>
-    <text x="36" y="40" font-family="'Inter',sans-serif" font-size="12" fill="#8b949e">Gaussian splat avatars rendered client-side, driven via LiveKit.</text>
+    <text x="36" y="40" font-family="'Inter',sans-serif" font-size="12" fill="#8b949e">Avatar rigs rendered client-side, driven via LiveKit.</text>
     <rect x="36" y="52" width="488" height="14" rx="7" fill="#1c2536"/>
     <rect x="36" y="52" width="220" height="14" rx="7" fill="#a78bfa">
       <animate attributeName="width" from="0" to="220" dur="0.9s" fill="freeze"/>

@@ -1,4 +1,17 @@
 // Renders profile/progress.svg from profile/progress.json
+//
+// Progress sources:
+//  - "auto": true → computed from GitHub issues labeled `mission:<id>`:
+//      progress = closed / (open + closed)
+//    Without any issues, the manual "progress" value is used as a fallback.
+//  - Otherwise the manual "progress" value is used as-is.
+//
+// Credentials:
+//  - GH_PAT (if set) searches ALL repos the token can see (use a fine-grained
+//    token with Issues read on the repos you track; the resulting percentages
+//    become public on your profile page).
+//  - Otherwise GH_TOKEN/GITHUB_TOKEN searches only this repository
+//    (Genjuzu/Genjuzu).
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -9,6 +22,47 @@ const repoRoot = join(__dirname, "..");
 const data = JSON.parse(
   readFileSync(join(repoRoot, "profile", "progress.json"), "utf8"),
 );
+
+const GH_TOKEN = process.env.GH_PAT || process.env.GH_TOKEN || "";
+const USE_ALL_REPOS = Boolean(process.env.GH_PAT);
+const REPO_QUAL = "repo:Genjuzu/Genjuzu";
+const SEARCH_BASE = "https://api.github.com/search/issues";
+
+async function countIssues(label) {
+  if (!GH_TOKEN) return null;
+  const headers = {
+    Authorization: `Bearer ${GH_TOKEN}`,
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
+  const baseQuery = `${USE_ALL_REPOS ? "" : REPO_QUAL + " "}label:"${label}" is:issue`;
+  async function count(state) {
+    const url = `${SEARCH_BASE}?q=${encodeURIComponent(baseQuery + " state:" + state)}&per_page=1`;
+    const res = await fetch(url, { headers });
+    if (!res.ok) throw new Error(`GitHub search failed (${res.status}) for ${label}/${state}`);
+    const j = await res.json();
+    return j.total_count ?? 0;
+  }
+  const [open, closed] = await Promise.all([count("open"), count("closed")]);
+  return { open, closed };
+}
+
+for (const m of data.missions) {
+  if (m.auto && m.label) {
+    const c = await countIssues(m.label);
+    if (c) {
+      const total = c.open + c.closed;
+      if (total > 0) {
+        m.progress = Math.round((c.closed / total) * 100);
+        console.log(`${m.label}: ${c.closed}/${total} closed → ${m.progress}%`);
+      } else {
+        console.log(`${m.label}: no issues yet → fallback ${m.progress}%`);
+      }
+    } else {
+      console.log(`${m.label}: no token, fallback ${m.progress}%`);
+    }
+  }
+}
 
 const CARD_W = 760;
 const PAD = 36;

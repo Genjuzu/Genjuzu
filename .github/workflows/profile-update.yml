@@ -22,6 +22,13 @@ jobs:
 
       - name: Render progress card
         run: node scripts/render-progress.mjs
+        env:
+          # Default: counts issues labeled `mission:<id>` in this repo only.
+          # To also count issues in private repos, add a fine-grained PAT with
+          # Issues read access as a repo secret named GH_PAT. The resulting
+          # percentages become public on the profile page.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
 
       - name: Commit rendered visuals
         run: |

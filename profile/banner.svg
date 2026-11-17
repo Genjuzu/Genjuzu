@@ -40,7 +40,7 @@
     <rect x="44" y="172" width="120" height="26" rx="13" fill="#1c2536" stroke="#22d3ee" stroke-opacity="0.35"/>
     <text x="56" y="189">VR · OPENXR</text>
     <rect x="176" y="172" width="128" height="26" rx="13" fill="#1c2536" stroke="#a78bfa" stroke-opacity="0.35"/>
-    <text x="188" y="189">GAUSSIAN SPLATS</text>
+    <text x="188" y="189">LIVE AVATARS</text>
     <rect x="316" y="172" width="116" height="26" rx="13" fill="#1c2536" stroke="#34d399" stroke-opacity="0.35"/>
     <text x="328" y="189">AI AGENTS</text>
     <rect x="444" y="172" width="110" height="26" rx="13" fill="#1c2536" stroke="#f472b6" stroke-opacity="0.35"/>
