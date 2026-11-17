@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="220" viewBox="0 0 760 220" role="img" aria-label="Wudu — Genjuzu banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#131a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="760" height="220" rx="18" fill="url(#bg)"/>
+  <rect width="760" height="220" rx="18" fill="url(#grid)"/>
+
+  <circle cx="660" cy="40" r="130" fill="#a78bfa" opacity="0.10"/>
+  <circle cx="90" cy="200" r="110" fill="#22d3ee" opacity="0.08"/>
+
+  <g stroke="url(#accent)" fill="none" opacity="0.55">
+    <ellipse cx="600" cy="120" rx="95" ry="38" stroke-width="1.2"/>
+    <ellipse cx="600" cy="120" rx="70" ry="26" stroke-width="1"/>
+    <circle cx="600" cy="120" r="5" fill="url(#accent)" stroke="none" filter="url(#glow)"/>
+    <circle cx="695" cy="96" r="3" fill="#22d3ee" stroke="none"/>
+    <circle cx="530" cy="146" r="2.5" fill="#a78bfa" stroke="none"/>
+  </g>
+
+  <text x="44" y="88" font-family="'JetBrains Mono',monospace" font-size="40" font-weight="800" fill="#e6edf3">WUDU</text>
+  <text x="46" y="120" font-family="'JetBrains Mono',monospace" font-size="16" font-weight="600" fill="url(#accent)" filter="url(#glow)">GENJUZU&nbsp;&nbsp;//&nbsp;&nbsp;HAMMBURG</text>
+  <text x="46" y="156" font-family="'Inter',sans-serif" font-size="14" fill="#8b949e">Building immersive worlds • AI agents • sound &amp; stories</text>
+
+  <g font-family="'JetBrains Mono',monospace" font-size="11" fill="#a5b3c4">
+    <rect x="44" y="172" width="120" height="26" rx="13" fill="#1c2536" stroke="#22d3ee" stroke-opacity="0.35"/>
+    <text x="56" y="189">VR · OPENXR</text>
+    <rect x="176" y="172" width="128" height="26" rx="13" fill="#1c2536" stroke="#a78bfa" stroke-opacity="0.35"/>
+    <text x="188" y="189">GAUSSIAN SPLATS</text>
+    <rect x="316" y="172" width="116" height="26" rx="13" fill="#1c2536" stroke="#34d399" stroke-opacity="0.35"/>
+    <text x="328" y="189">AI AGENTS</text>
+    <rect x="444" y="172" width="110" height="26" rx="13" fill="#1c2536" stroke="#f472b6" stroke-opacity="0.35"/>
+    <text x="456" y="189">MUSIC</text>
+    <rect x="566" y="172" width="110" height="26" rx="13" fill="#1c2536" stroke="#fbbf24" stroke-opacity="0.35"/>
+    <text x="578" y="189">FICTION</text>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+name: Update profile visuals
+on:
+  push:
+    branches: [main]
+    paths: ["profile/progress.json", "scripts/render-progress.mjs"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Render progress card
+        run: node scripts/render-progress.mjs
+
+      - name: Commit rendered visuals
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/progress.svg
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: render progress visuals"
+            git push
+          fi

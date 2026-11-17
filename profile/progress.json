@@ -1,0 +1,45 @@
+{
+  "missions": [
+    {
+      "id": "vr-scenes",
+      "title": "VR Scene Building",
+      "description": "Native VR scene editor with Unity & OpenXR, two controllers.",
+      "progress": 65,
+      "color": "#22d3ee"
+    },
+    {
+      "id": "live-avatars",
+      "title": "Live Avatars",
+      "description": "Gaussian splat avatars rendered client-side, driven via LiveKit.",
+      "progress": 45,
+      "color": "#a78bfa"
+    },
+    {
+      "id": "ai-agents",
+      "title": "AI Agent Stack",
+      "description": "Personal on-device answer memory and multi-agent app factory.",
+      "progress": 55,
+      "color": "#34d399"
+    },
+    {
+      "id": "music",
+      "title": "Music Production",
+      "description": "Lossless Suno catalogue workflows and festival gig acquisition tools.",
+      "progress": 35,
+      "color": "#f472b6"
+    },
+    {
+      "id": "fiction",
+      "title": "Fiction Writing",
+      "description": "Book of Tammuz — a dark mythic novel in progress.",
+      "progress": 25,
+      "color": "#fbbf24"
+    }
+  ],
+  "now": [
+    "Multivox experiments — spatial audio voxel engines",
+    "LivePortrait fork: animating portraits for avatar tests",
+    "Gaussian splat turnaround & FaceLift refinement in Colab",
+    "App-Manufaktur: multi-bot app factory playbook"
+  ]
+}
