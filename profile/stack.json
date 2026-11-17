@@ -1,0 +1,14 @@
+{
+  "tools": [
+    { "id": "unity", "label": "Unity", "color": "#5e9ce2" },
+    { "id": "openxr", "label": "OpenXR", "color": "#22d3ee" },
+    { "id": "livekit", "label": "LiveKit", "color": "#a78bfa" },
+    { "id": "colab", "label": "Google Colab", "color": "#fbbf24" },
+    { "id": "whisper", "label": "Whisper", "color": "#34d399" },
+    { "id": "suno", "label": "Suno", "color": "#f472b6" },
+    { "id": "rclone", "label": "rclone", "color": "#fb923c" },
+    { "id": "ghactions", "label": "GitHub Actions", "color": "#8b949e" },
+    { "id": "android", "label": "Android", "color": "#3ddc84" },
+    { "id": "agents", "label": "Multi-Agent Rigs", "color": "#f87171" }
+  ]
+}

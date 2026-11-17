@@ -2,7 +2,11 @@ name: Update profile visuals
 on:
   push:
     branches: [main]
-    paths: ["profile/progress.json", "scripts/render-progress.mjs"]
+    paths:
+      - "profile/progress.json"
+      - "profile/stack.json"
+      - "scripts/render-progress.mjs"
+      - "scripts/render-stack.mjs"
   workflow_dispatch:
 
 permissions:
@@ -30,14 +34,22 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_PAT: ${{ secrets.GH_PAT }}
 
+      - name: Render stack card
+        run: node scripts/render-stack.mjs
+        env:
+          # Without GH_PAT the stack card uses public repos only. Add a fine-
+          # grained PAT with repo read access as GH_PAT to also include private
+          # repos. Only aggregate data is shown, never repo names.
+          GH_PAT: ${{ secrets.GH_PAT }}
+
       - name: Commit rendered visuals
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/progress.svg
+          git add profile/progress.svg profile/stack.svg
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: render progress visuals"
+            git commit -m "chore: render profile visuals"
             git push
           fi

@@ -26,11 +26,18 @@ Coder from Hamburg, building immersive virtual worlds, live AI avatars, and quie
 
 ---
 
+### 🧰 Stack & Skills
+
+> Aggregated from all of Wudu's repos. Language shares are computed automatically; the toolbox is curated in [`profile/stack.json`](profile/stack.json). Add a `GH_PAT` secret to also include private repos — only aggregate numbers are shown, never repo names.
+
+<img src="profile/stack.svg" alt="Stack & skills" width="760">
+
+---
+
 ### 📊 GitHub Pulse
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Genjuzu&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" alt="GitHub stats" height="170">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Genjuzu&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="Top languages" height="170">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Genjuzu&theme=tokyonight&hide_border=true" alt="Streak" height="170">
 </p>
 
