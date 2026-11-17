@@ -33,6 +33,10 @@ Coder from Hamburg, building immersive virtual worlds, live AI avatars, and quie
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Genjuzu&theme=tokyonight&hide_border=true" alt="Streak" height="170">
 </p>
 
+### 🔥 Daily activity
+
+[![Genjuzu's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Genjuzu&theme=tokyonight&hide_border=true)](https://github.com/Genjuzu/github-readme-activity-graph)
+
 ---
 
 ### 🎵 Music · ✍️ Fiction
